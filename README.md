@@ -114,7 +114,6 @@ Ecossistema concebido, arquitetado e implementado integralmente por mim. Reúne 
 | **[AuditaData-Health](https://github.com/EzioChifunga/AuditaData-Health)** | Middleware de pseudonimização e auditoria de equidade para bases do SUS | Python |
 | **[color-blind-assistive-module](https://github.com/EzioChifunga/color-blind-assistive-module)** | Módulo assistivo para daltonismo e discromatopsias, derivado da iniciação científica no INT | — |
 | **[study-organizer](https://github.com/EzioChifunga/study-organizer)** | Registro de sessões de estudo sem banco de dados: cada sessão vira nota Markdown com YAML frontmatter em cofre do Obsidian | Java · JavaFX |
-| **[Horto-3.0](https://github.com/EzioChifunga/Horto-3.0)** | Aplicação de horta educacional desenvolvida na UFRJ | Dart · Flutter |
 | **[Corujinha](https://github.com/EzioChifunga/Corujinha)** | Aplicação móvel | Dart · Flutter |
 | **[Spring-Cloud-Boot-Confluent-Kafka](https://github.com/EzioChifunga/Spring-Cloud---Boot-Confluent-Kafka)** | Estudo de mensageria distribuída com Spring Cloud e Kafka | Java |
 | **[precat-rio-radar](https://github.com/EzioChifunga/precat-rio-radar)** | Radar de precatórios | TypeScript |
