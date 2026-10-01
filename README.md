@@ -7,38 +7,48 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/in/ezio-chifunga/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://medium.com/@eziochifunga"><img src="https://img.shields.io/badge/Medium-000000?style=flat-square&logo=medium&logoColor=white" alt="Medium"></a>
-  <a href="https://www.behance.net/eziochifunga"><img src="https://img.shields.io/badge/Behance-1769FF?style=flat-square&logo=behance&logoColor=white" alt="Behance"></a>
   <a href="http://lattes.cnpq.br/9796530701066676"><img src="https://img.shields.io/badge/Lattes-0A66A6?style=flat-square&logo=academia&logoColor=white" alt="Lattes"></a>
   <a href="https://orcid.org/0009-0007-8951-7645"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=flat-square&logo=orcid&logoColor=white" alt="ORCID"></a>
   <a href="mailto:eziochifunga.dev@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="https://medium.com/@eziochifunga"><img src="https://img.shields.io/badge/Medium-000000?style=flat-square&logo=medium&logoColor=white" alt="Medium"></a>
+  <a href="https://www.behance.net/eziochifunga"><img src="https://img.shields.io/badge/Behance-1769FF?style=flat-square&logo=behance&logoColor=white" alt="Behance"></a>
 </p>
 
 ---
 
 ## Sobre
 
-Desenvolvedor full stack com cerca de quatro anos de experiência, concentrado em software para saúde e em sistemas que lidam com volume e sensibilidade de dado. Trabalho do levantamento de requisitos com o usuário final até a arquitetura e a entrega.
+Experiência no desenvolvimento de sistemas, especialmente nas áreas de saúde e gestão de dados. Atuo em todo o ciclo de desenvolvimento, do levantamento de requisitos com usuários à definição da arquitetura e implementação das soluções, criação de modelos visuais com atenção à qualidade, integridade e confiabilidade das informações.
 
-Em software comum um valor aproximado passa. Em saúde, ele é uma informação errada entregue como certeza — e é esse critério que orienta as minhas decisões de modelagem.
-
-Entro rápido em domínio novo: nutrição, direito processual, varejo e vigilância alimentar foram os últimos. Graduando em Análise e Desenvolvimento de Sistemas na FAETERJ-Rio, com formação anterior em eletrônica e em design de interfaces.
+Projetos de nutrição, direito processual, varejo e vigilância alimentar. Sou graduando em Análise e Desenvolvimento de Sistemas pela FAETERJ-Rio, com formação técnica em Eletrônica e conhecimentos em design de interfaces.
 
 ---
 
 ## No que estou trabalhando
 
-### SIDIAT — insegurança alimentar em recorte intraurbano
+### Nutra | Nutraentes - Multiplataforma de nutrição
+Ecossistema concebido, arquitetado e implementado integralmente por mim. Reúne aplicativo para o público geral e outro para publico infantil distribuído via Google Play e plataforma de gestão de consultório para profissionais de nutrição.
+
+- Arquitetura distribuída: serviços em Node.js e Go, apps em Flutter, workspace em Angular, base em PostgreSQL migrada de Firestore.
+- Camada de RAG sobre base estruturada de regras nutricionais, com busca vetorial em Qdrant.
+- Engine de sugestão que entrega caminhos possíveis ao profissionalm assim a decisão clínica permanece com o nutricionista.
+
+`Go` `Python` `Node.js` `Flutter` `Angular` `PostgreSQL` `Qdrant`
+
+**[→ nutraentes.com.br](https://nutraentes.com.br/)**
+
+### SIDIAT - Insegurança alimentar em recorte intraurbano
 Trabalho de conclusão de curso. Sete bases públicas brasileiras reunidas em um único banco PostgreSQL para leitura territorial de insegurança alimentar no município do Rio de Janeiro.
 
-- Sete pipelines de coleta em Python — data.rio/IPP, PNAD Contínua/SIDRA, DIEESE, IPCA/INPC, CONAB-PROHORT, SISVAN e IBGE — com carga idempotente e manifesto de procedência por camada.
+- Sete pipelines de coleta em Python: data.rio/IPP, PNAD Contínua/SIDRA, DIEESE, IPCA/INPC, CONAB-PROHORT, SISVAN e IBGE. Usando carga idempotente e manifesto de procedência por camada.
 - Oito schemas com escopos geográficos incompatíveis entre si (bairro, setor censitário, município, região metropolitana, UF, entreposto de atacado), com as regras de cruzamento documentadas para impedir agregação silenciosamente errada.
-- Schema de referência que resolve o problema do denominador: onze das doze tabelas da PNAD são percentuais sem contagem.
 - Aplicação em Next.js com doze painéis públicos e área de trabalho autenticada, formulário domiciliar com roteiro recalculado a cada resposta e regras de integridade aplicadas no servidor.
 
 `Python` `PostgreSQL` `Next.js` `TypeScript` `GeoJSON`
 
-### AuditaData-Health — privacidade e equidade medidas juntas
+**[→ sidiat.com.br](https://sidiat.vercel.app/)**
+
+### AuditaData-Health - Privacidade e equidade medidas juntas
 Middleware que recebe microdados do DATASUS e devolve datasets pseudonimizados, agregados sob privacidade diferencial com orçamento de ε contabilizado, e relatório de auditoria de equidade e proveniência.
 
 - Arquitetura em sete camadas desacopladas, com contrato entre módulos em Parquet acompanhado de manifesto (hash do input, versão do código, parâmetros, timestamp).
@@ -51,18 +61,6 @@ Middleware que recebe microdados do DATASUS e devolve datasets pseudonimizados, 
 `Python 3.11` `uv` `Docker` `PySUS` `Parquet` `W3C PROV`
 
 **[→ Repositório](https://github.com/EzioChifunga/AuditaData-Health)**
-
-### Nutra — plataforma de nutrição
-Ecossistema concebido, arquitetado e implementado integralmente por mim. Reúne aplicativo para o público geral, módulo infantil distribuído via Google Play e plataforma de gestão de consultório para profissionais de nutrição.
-
-- Arquitetura distribuída: serviços em Node.js e Go, apps em Flutter, workspace em Angular, base em PostgreSQL migrada de Firestore.
-- Camada de RAG sobre base estruturada de regras nutricionais, com busca vetorial em Qdrant.
-- Consolidação de cinco tabelas de composição nutricional que discordam entre si, tratando cada fonte como instrumento de medição com margem própria de incerteza.
-- Engine de sugestão que entrega caminhos possíveis ao profissional — a decisão clínica permanece com o nutricionista.
-
-`Go` `Node.js` `Flutter` `Angular` `PostgreSQL` `Qdrant`
-
-**[→ nutraentes.com.br](https://nutraentes.com.br/)**
 
 ---
 
@@ -114,56 +112,34 @@ Ecossistema concebido, arquitetado e implementado integralmente por mim. Reúne 
 | **[AuditaData-Health](https://github.com/EzioChifunga/AuditaData-Health)** | Middleware de pseudonimização e auditoria de equidade para bases do SUS | Python |
 | **[color-blind-assistive-module](https://github.com/EzioChifunga/color-blind-assistive-module)** | Módulo assistivo para daltonismo e discromatopsias, derivado da iniciação científica no INT | — |
 | **[study-organizer](https://github.com/EzioChifunga/study-organizer)** | Registro de sessões de estudo sem banco de dados: cada sessão vira nota Markdown com YAML frontmatter em cofre do Obsidian | Java · JavaFX |
-| **[Corujinha](https://github.com/EzioChifunga/Corujinha)** | Aplicação móvel | Dart · Flutter |
+| **[Corujinha](https://github.com/EzioChifunga/Corujinha)** | Sistema de gerenciamento de bibliotecas acadêmicas para acesso e inventário de acervo | Dart · Flutter |
 | **[Spring-Cloud-Boot-Confluent-Kafka](https://github.com/EzioChifunga/Spring-Cloud---Boot-Confluent-Kafka)** | Estudo de mensageria distribuída com Spring Cloud e Kafka | Java |
 | **[precat-rio-radar](https://github.com/EzioChifunga/precat-rio-radar)** | Radar de precatórios | TypeScript |
 | **[water-falls-visual](https://github.com/EzioChifunga/water-falls-visual)** | Camada de visualização do projeto Water Falls | TypeScript |
-| **[portfolio-artistico](https://github.com/EzioChifunga/portfolio-artistico)** | Portfólio visual | TypeScript |
-
-Projetos como SIDIAT, Nutra, Ciclo, Meu Kamba, Wigly e Sicolo estão em repositórios privados. Posso dar acesso ou apresentar em detalhe mediante contato.
+| **[portfolio-artistico](https://github.com/EzioChifunga/portfolio-artistico)** | Portfólio de Pinturas e Desenhos | TypeScript |
 
 ---
 
 ## Como eu trabalho
 
-**Falo com quem vai usar.** Em todos os sistemas que construí, o requisito veio de entrevista, não de suposição. No Nutra foram nutricionistas, psicólogos, professores das redes pública e privada, diretores de escola e de clínica e pais de crianças atípicas. No Horto e no Comjuntos, alunos, professores e responsáveis.
+**Converso com quem vai usar.** Nos sistemas que desenvolvi, procuro entender o problema diretamente com as pessoas envolvidas antes de definir uma solução. No Nutra, conversei com nutricionistas, psicólogos, professores, diretores de escolas e clínicas e pais de crianças atípicas. No Horto e no Comjuntos, trabalhei ouvindo alunos, professores e responsáveis.
 
-**Trato dado como instrumento de medição.** Quando cinco tabelas de composição nutricional discordam sobre a mesma cenoura, a resposta não é escolher uma: é consolidar com peso por qualidade de medição e deixar a incerteza explícita. O mesmo princípio sustenta a documentação de escopo geográfico no SIDIAT.
+**Uso os dados para entender o problema, não só para preencher tabelas.** Quando diferentes bases apresentam valores diferentes para o mesmo alimento, por exemplo, não considero automaticamente que uma delas está certa. Comparo as fontes, avalio a qualidade dos dados e registro as incertezas. Esse cuidado também está presente na documentação do escopo geográfico do SIDIAT.
 
-**Lidero equipe.** Na Equality Precatórios conduzi formalmente uma equipe de quatro pessoas, com interlocução direta com a diretoria, levantamento e priorização de demandas e distribuição de tarefas.
+**Penso em acessibilidade desde o início.** Comecei a estudar o tema em 2023, inicialmente com foco em interfaces para pessoas com daltonismo e baixa visão. Mais recentemente, retomei essa pesquisa para investigar os problemas de acessibilidade que podem surgir quando interfaces geradas por IA chegam à produção sem uma revisão adequada.
 
-**Acessibilidade não é etapa final.** Comecei em 2023 estudando interfaces para pessoas com daltonismo e baixa visão, e retomei a linha com um recorte novo: o que acontece quando interface gerada por IA entra em produção sem revisão de acessibilidade.
-
----
-
-## Escrita e design
-
-Escrevo no [Medium](https://medium.com/@eziochifunga) sobre arquitetura de sistemas em saúde, integridade de dado e processo de design — incluindo uma peça técnica sobre a estrutura interna da engine de sugestão do Nutra.
-
-Trabalho visual e de interface no [Behance](https://www.behance.net/eziochifunga).
-
----
-
-## Formação e pesquisa
-
-**Tecnólogo em Análise e Desenvolvimento de Sistemas** — FAETERJ-Rio, 2022 a 2027 (previsto)
-**Técnico em Eletrônica** — Colégio Flama, 2017 a 2019
-**Iniciação científica (CNPq)** — Instituto Nacional de Tecnologia, 2023
-
-Áreas de interesse: Informática em Saúde · Vigilância Alimentar e Nutricional · Ciência de dados aplicada a políticas públicas · Acessibilidade digital e tecnologia assistiva
-
-[Currículo Lattes](http://lattes.cnpq.br/9796530701066676) · [ORCID](https://orcid.org/0009-0007-8951-7645)
 
 ---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=EzioChifunga&show_icons=true&hide_border=true&count_private=true&theme=default" alt="Estatísticas do GitHub" height="150">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=EzioChifunga&layout=compact&hide_border=true&theme=default" alt="Linguagens mais usadas" height="150">
+
+  <img src="https://github-readme-stats.vercel.app/api?username=EzioChifunga&show_icons=true&hide_border=true&count_private=true&theme=transparent" alt="Estatísticas do GitHub" height="150">
+
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=EzioChifunga&layout=compact&hide_border=true&theme=transparent" alt="Linguagens mais usadas" height="150">
+
 </p>
 
----
-
 <p align="center">
-  <em>Aberto a colaboração em saúde digital, dados públicos e acessibilidade.</em><br>
+  <em>Aberto a colaboração em saúde digital, dados públicos, acessibilidade e criação de identidade.</em><br>
   <a href="mailto:eziochifunga.dev@gmail.com">eziochifunga.dev@gmail.com</a>
 </p>
